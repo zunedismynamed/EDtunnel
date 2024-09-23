@@ -38,11 +38,11 @@ ask question and cloudflare ips: [https://t.me/edtunnel](https://t.me/edtunnel)
 
 ## Deploy in worker.dev
 
-1. Copy `_worker.js` code from [here](https://github.com/6Kmfi6HP/EDtunnel/blob/main/_worker.js).
+1. Copy `_worker.js` code from [here](https://github.com/SonzaiEkkusu/EDtunnel/blob/main/_worker.js).
 
 2. Alternatively, you can click the button below to deploy directly.
 
-   [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/6Kmfi6HP/EDtunnel)
+   [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/SonzaiEkkusu/EDtunnel)
 
 3. Noneed add `nodejs_compat` at setting Compatibility flags
 
@@ -167,10 +167,10 @@ The path `/uuid your seetting` to get the clash config and vless:// link.
 
 ## Star History
 
-<a href="https://star-history.com/#6Kmfi6HP/EDtunnel&Date">
+<a href="https://star-history.com/#SonzaiEkkusu/EDtunnel&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=6Kmfi6HP/EDtunnel&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=6Kmfi6HP/EDtunnel&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=6Kmfi6HP/EDtunnel&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=SonzaiEkkusu/EDtunnel&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=SonzaiEkkusu/EDtunnel&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=SonzaiEkkusu/EDtunnel&type=Date" />
   </picture>
 </a>
