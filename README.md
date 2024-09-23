@@ -1,7 +1,7 @@
 # EDtunnel
 
 <p align="center">
-  <img src="https://cloudflare-ipfs.com/ipfs/bafybeigd6i5aavwpr6wvnwuyayklq3omonggta4x2q7kpmgafj357nkcky" alt="edgetunnel" style="margin-bottom: -50px;">
+  <img src="https://ipfs.io/ipfs/bafybeigd6i5aavwpr6wvnwuyayklq3omonggta4x2q7kpmgafj357nkcky" alt="edgetunnel" style="margin-bottom: -50px;">
 </p>
 
 GitHub Repository for [https://github.com/zizifn/edgetunnel](https://github.com/zizifn/edgetunnel)
@@ -32,17 +32,59 @@ ask question and cloudflare ips: [https://t.me/edtunnel](https://t.me/edtunnel)
 
 2. Clone this repository deploy in cloudflare pages.
 
+3. Add `nodejs_compat` at setting Compatibility flags
+
+![note](image/image.png)
+
 ## Deploy in worker.dev
 
-1. Copy `_worker.js` code from [here](https://github.com/3Kmfi6HP/EDtunnel/blob/main/_worker.js).
+1. Copy `_worker.js` code from [here](https://github.com/6Kmfi6HP/EDtunnel/blob/main/_worker.js).
 
 2. Alternatively, you can click the button below to deploy directly.
 
-   [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/3Kmfi6HP/EDtunnel)
+   [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/6Kmfi6HP/EDtunnel)
+
+3. Noneed add `nodejs_compat` at setting Compatibility flags
+
+## How to use non 443 port as proxyIP
+
+1. got to `https://proxyip.edtunnel.best/` paste your `ProxyIP:proxyport` and click `Check` button.
+2. if `Proxy IP` is `true`, you can use this `ProxyIP:proxyport` as `ProxyIP`
+3. if `Proxy IP` is `false`, you can see `Origin` is `443` this means the port can be accessed website.
+4. edit worker `PROXYIP` variable example `211.230.110.231:50008`
+
+Note: the proxyIP with port may not vaild some cloudflare site that use http only.
+
+## How to change UUID
+
+1. edit `wrangler.toml` file `UUID` variable(not recommended at public repo)
+2. edit `UUID` in cloudflare dashboard secret enviroment variable (recommended)
+
+## Support Environment Variables
+
+| Variable       | Required | Example                                                                                                     | Description                        |
+| -------------- | -------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| `UUID`         | No       | `12345678-1234-1234-1234-123456789012`                                                                      | Unique identifier                  |
+| `PROXYIP`      | No       | `1.1.1.1` or `cdn.xn--b6gac.eu.org` or with port `1.1.1.1:9443` or `[2a01:4f8:c2c:123f:64:5:6810:c55a]:443` | Redirct cloudflare ips to ProxyIP  |
+| `SOCKS5`       | No       | `1.1.1.1:1080` or `user:pass@host:port`                                                                     | SOCKS5 proxy cloudflare ips        |
+| `SOCKS5_RELAY` | No       | `true` or `false`                                                                                           | Enable SOCKS5 relaying all traffic |
+
+### Enviroment variable setting workers
+
+![workes](image/image-1.png)
+
+### Enviroment variable setting pages
+
+![pages](image/image-2.png)
+
+## How to use trojan
+
+1. the `UUID` enviroment variable is `trojan` password
+2. v2ray path is `/trojan`
 
 ## Lazy to deploy
 
-`aHR0cHM6Ly9vc3MudjJyYXlzZS5jb20vcHJveGllcy9kYXRhLzIwMjMtMDctMzAvRnJFS1lvQS50eHQ=` (free clash.meta subscribe config)
+subscribe link`https://sub.xf.free.hr/auto` (auto detect client config)
 
 ## UUID Setting (Optional)
 
@@ -125,10 +167,10 @@ The path `/uuid your seetting` to get the clash config and vless:// link.
 
 ## Star History
 
-<a href="https://star-history.com/#3Kmfi6HP/EDtunnel&Date">
+<a href="https://star-history.com/#6Kmfi6HP/EDtunnel&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=3Kmfi6HP/EDtunnel&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=3Kmfi6HP/EDtunnel&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=3Kmfi6HP/EDtunnel&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=6Kmfi6HP/EDtunnel&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=6Kmfi6HP/EDtunnel&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=6Kmfi6HP/EDtunnel&type=Date" />
   </picture>
 </a>
